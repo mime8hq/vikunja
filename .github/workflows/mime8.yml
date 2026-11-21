@@ -10,6 +10,8 @@ permissions:
 
 jobs:
   mime8:
+    # Named apart from the "mime8" check the mime8 GitHub App posts with the result.
+    name: Upload builds to mime8
     # Fork PRs have no secrets (and must not get them), so they're skipped.
     if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
