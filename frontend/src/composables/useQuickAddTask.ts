@@ -157,7 +157,8 @@ export function useQuickAddTask() {
 		const context = captureClientRequestContext()
 		const built = await Promise.all(entries.map(entry => build(entry, context)))
 		assertClientRequestContext(context)
-		const result = await bulk.mutateAsync(built.map(item => item.task))
+		const tasks = built.map(item => item.task)
+		const result = await bulk.mutateAsync(tasks)
 		await runWrites(built.map((item, index) => ({item, index})), async ({item, index}) => {
 			const task = result.tasks[index]
 			if (!task) return
