@@ -5,7 +5,10 @@
 	<!-- mime8 records sessions here for visual regression testing (staging: api.mime8.dev). -->
 	<script src="https://cdn.jsdelivr.net/npm/@mime8/recorder@0.1.1/dist/recorder.iife.js"></script>
 	<script>
-		mime8.init({ projectKey: "pk_staging", collectorUrl: "https://api.mime8.dev" })
+		// Only the hosted app records: CI's e2e runs and local previews load this page too.
+		if (location.hostname === "vikunja.mime8.dev") {
+			mime8.init({ projectKey: "pk_staging", collectorUrl: "https://api.mime8.dev" })
+		}
 	</script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Vikunja</title>
