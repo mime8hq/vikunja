@@ -570,7 +570,7 @@
     "list": {
       "title": "List",
       "add": "Add",
-      "addPlaceholder": "Add a task…",
+      "addPlaceholder": "What needs doing?",
       "empty": "This project is currently empty.",
       "newTaskCta": "Create a task.",
       "editTask": "Edit Task",
