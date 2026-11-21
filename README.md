@@ -64,3 +64,5 @@ The contents of [`desktop/`](desktop/) are licensed under
 ### Unsplash Images
 
 Background images from Unsplash are distributed under the [Unsplash License](https://unsplash.com/license). The license requires giving credit to the photographer and Unsplash. See [Unsplash’s terms](https://unsplash.com/terms) for more information.
+
+<!-- mime8 trial: a README-only change; the mime8 check should pass. -->
