@@ -24,3 +24,5 @@ npx wrangler deploy
 ```
 
 After syncing the fork with upstream, re-pin the API image to the matching `unstable` digest (`docker buildx imagetools inspect vikunja/vikunja:unstable`) and check that `/api/v1/info` reports the fork's commit.
+
+PRs on this fork get a `mime8` check: `.github/workflows/mime8.yml` uploads the PR's base and head builds with `@mime8/cli`.
